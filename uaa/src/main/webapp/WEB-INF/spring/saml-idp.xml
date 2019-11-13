@@ -129,8 +129,6 @@
         <constructor-arg value="${login.idp.entityID:${login.entityID:unit-test-idp}}"/>
     </bean>
 
-    <bean id="restTemplateConfig" class="org.cloudfoundry.identity.uaa.impl.config.RestTemplateConfig"/>
-
     <bean id="fixedHttpMetaDataProvider" class="org.cloudfoundry.identity.uaa.provider.saml.FixedHttpMetaDataProvider">
         <property name="trustingRestTemplate" ref="trustingRestTemplate"/>
         <property name="nonTrustingRestTemplate" ref="nonTrustingRestTemplate"/>
